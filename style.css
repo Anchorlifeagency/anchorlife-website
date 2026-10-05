@@ -34,7 +34,7 @@ body {
     max-width: 700px;
 }
 
-/* Header & Nav Fix */
+/* Header & Nav */
 .navbar {
     background: #ffffff;
     padding: 15px 0;
@@ -48,7 +48,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap; /* Verhindert Überlappung bei kleineren Bildschirmen */
+    flex-wrap: wrap;
     gap: 15px;
 }
 
@@ -87,6 +87,20 @@ body {
 
 .nav-links a:hover {
     color: var(--accent-gold);
+}
+
+/* Spezieller Kontakt-Button im Header: Fette weiße Schrift auf Dunkelblau */
+.btn-header-contact {
+    background-color: var(--primary) !important;
+    color: #ffffff !important;
+    font-weight: 700 !important;
+    padding: 10px 22px !important;
+    border-radius: 6px;
+}
+
+.btn-header-contact:hover {
+    background-color: var(--accent-gold) !important;
+    color: #ffffff !important;
 }
 
 /* Hero Section */
@@ -250,7 +264,7 @@ body {
     color: var(--primary);
     text-decoration: none;
     font-weight: 600;
-    padding: 8px 0;
+    padding: 6px 0;
 }
 
 .maps-link:hover { color: var(--accent-gold); }
@@ -260,7 +274,6 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 25px;
-    margin-bottom: 40px;
 }
 
 .service-box {
@@ -275,18 +288,7 @@ body {
 .service-box ul { list-style: none; }
 .service-box li { font-size: 0.9rem; margin-bottom: 10px; color: #d0d7de; }
 
-.cta-banner {
-    background: linear-gradient(90deg, #1c3654, #264870);
-    padding: 35px;
-    border-radius: 12px;
-    text-align: center;
-    color: #ffffff;
-}
-
-.cta-banner h3 { font-family: var(--font-heading); font-size: 1.5rem; margin-bottom: 10px; }
-.cta-banner p { margin-bottom: 20px; color: #e0e6ed; }
-
-/* Kontaktformular Fix (Gute Lesbarkeit auf starkem Hintergrund) */
+/* Kontaktformular */
 .contact-form {
     background: #ffffff;
     padding: 35px;
@@ -306,15 +308,8 @@ body {
     border-radius: 6px;
     font-family: inherit;
     font-size: 0.95rem;
-    color: #212529 !important; /* Erzwingt dunkle Schrift im Input */
-    background-color: #ffffff !important; /* Erzwingt weiße Felder */
-}
-
-.form-group input:focus, 
-.form-group select:focus, 
-.form-group textarea:focus {
-    outline: none;
-    border-color: var(--accent-gold);
+    color: #212529 !important;
+    background-color: #ffffff !important;
 }
 
 .full-width { width: 100%; }
@@ -324,3 +319,35 @@ body {
 .footer-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; margin-bottom: 30px;}
 .footer h4 { color: #ffffff; font-family: var(--font-heading); margin-bottom: 12px;}
 .footer-bottom { border-top: 1px solid rgba(255,255,255,0.05); padding-top: 20px; text-align: center;}
+
+/* Lightbox Modal */
+.clickable-img { cursor: zoom-in; }
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    cursor: zoom-out;
+}
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 85vh;
+    border-radius: 8px;
+    object-fit: contain;
+}
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
