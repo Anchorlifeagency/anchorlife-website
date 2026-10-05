@@ -54,7 +54,7 @@
                 <!-- Apartment Top 1 -->
                 <article class="card apartment-card">
                     <div class="card-image-slider">
-                        <img src="images/interior-1.jpg" alt="Esterházygasse Top 1 Innenansicht" id="img-top1">
+                        <img src="images/interior%20top1%20(1).jpg" alt="Esterházygasse Top 1 Innenansicht" id="img-top1" class="clickable-img" onclick="openLightbox('top1')">
                         <div class="slider-controls">
                             <button onclick="changeImage('top1', -1)">❮</button>
                             <button onclick="changeImage('top1', 1)">❯</button>
@@ -74,7 +74,7 @@
                             <a href="https://maps.google.com/?q=Esterhazygasse+28,+1060+Wien" target="_blank" rel="noopener" class="maps-link">
                                 📍 In Google Maps öffnen (Esterházygasse 28)
                             </a>
-                            <a href="images/plan-top1.png" target="_blank" class="maps-link">📐 Lageplan Top 1 ansehen</a>
+                            <a href="images/plan%20top1.png" target="_blank" class="maps-link">📐 Lageplan Top 1 ansehen</a>
                             <a href="https://www.airbnb.at/rooms/1567818051195310787" target="_blank" rel="noopener" class="btn btn-secondary">Auf Airbnb ansehen / Buchen</a>
                         </div>
                     </div>
@@ -83,7 +83,7 @@
                 <!-- Apartment Top 2 -->
                 <article class="card apartment-card">
                     <div class="card-image-slider">
-                        <img src="images/interior-5.jpg" alt="Esterházygasse Top 2 Innenansicht" id="img-top2">
+                        <img src="images/interior%20top2%20(1).jpg" alt="Esterházygasse Top 2 Innenansicht" id="img-top2" class="clickable-img" onclick="openLightbox('top2')">
                         <div class="slider-controls">
                             <button onclick="changeImage('top2', -1)">❮</button>
                             <button onclick="changeImage('top2', 1)">❯</button>
@@ -103,7 +103,7 @@
                             <a href="https://maps.google.com/?q=Esterhazygasse+28,+1060+Wien" target="_blank" rel="noopener" class="maps-link">
                                 📍 In Google Maps öffnen (Esterházygasse 28)
                             </a>
-                            <a href="images/plan-top2.png" target="_blank" class="maps-link">📐 Lageplan Top 2 ansehen</a>
+                            <a href="images/plan%20top2.png" target="_blank" class="maps-link">📐 Lageplan Top 2 ansehen</a>
                             <a href="https://www.airbnb.at/rooms/1469670601424025526" target="_blank" rel="noopener" class="btn btn-secondary">Auf Airbnb ansehen / Buchen</a>
                         </div>
                     </div>
@@ -163,4 +163,80 @@
 
             <div class="cta-banner">
                 <h3>Sie besitzen ein Apartment in Wien und möchten passives Einkommen erzielen?</h3>
-                <p>Lassen
+                <p>Lassen Sie uns in einem unverbindlichen Erstgespräch das Potenzial Ihrer Immobilie berechnen.</p>
+                <a href="#kontakt" class="btn btn-gold">Jetzt Erstgespräch vereinbaren</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section: Kontakt & Anfragen -->
+    <section id="kontakt" class="section">
+        <div class="container small-container">
+            <div class="section-title">
+                <h2>Kontaktieren Sie uns</h2>
+                <p>Egal ob Sie eine Frage zu einer Buchung haben oder Ihre Immobilie erfolgreich vermieten möchten.</p>
+            </div>
+
+            <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                <input type="hidden" name="access_key" value="DEIN_ACCESS_KEY">
+                
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required placeholder="Ihr vollständiger Name">
+                </div>
+                <div class="form-group">
+                    <label for="email">E-Mail Adresse</label>
+                    <input type="email" id="email" name="email" required placeholder="ihre.adresse@beispiel.at">
+                </div>
+                <div class="form-group">
+                    <label for="type">Ich bin...</label>
+                    <select id="type" name="type">
+                        <option value="gast">Gast (Frage zur Buchung)</option>
+                        <option value="eigentuemer">Immobilieneigentümer (Interesse an Agenturleistungen)</option>
+                        <option value="sonstiges">Sonstiges</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Nachricht</label>
+                    <textarea id="message" name="message" rows="5" required placeholder="Wie können wir Ihnen helfen?"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary full-width">Nachricht Absenden</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer mit Impressum nach GISA-Daten -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-col">
+                <h4>Anchorlife Agency & Asset GmbH</h4>
+                <p>Exklusiver Apartment-Betrieb & Professionelles Kurzzeitvermietungs-Management in Wien.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Standort & Kontaktdaten</h4>
+                <p>Rotenturmstraße 16-18/6.Stock<br>1010 Wien, Österreich</p>
+            </div>
+            <div class="footer-col">
+                <h4>Rechtliches</h4>
+                <p>
+                    <strong>FN:</strong> 593199b<br>
+                    <strong>GISA-Zahl:</strong> 40037981<br>
+                    <strong>Geschäftsführung:</strong> Mag. Alexander Werner Jäger-Waldau<br>
+                    <strong>Gewerbebehörde:</strong> Magistrat der Stadt Wien
+                </p>
+            </div>
+        </div>
+        <div class="footer-bottom text-center">
+            <p>&copy; 2026 Anchorlife Agency & Asset GmbH. Alle Rechte vorbehalten.</p>
+        </div>
+    </footer>
+
+    <!-- Lightbox Modal für Bildvergrößerung -->
+    <div id="image-modal" class="modal" onclick="closeLightbox()">
+        <span class="modal-close">&times;</span>
+        <img class="modal-content" id="modal-img" alt="Vergrößerte Ansicht">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
