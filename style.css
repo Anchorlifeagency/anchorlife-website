@@ -351,3 +351,39 @@ body {
     font-weight: bold;
     cursor: pointer;
 }
+/* Hervorgehobener Google-Maps-Link */
+.maps-link-highlighted {
+    background-color: #f8f9fa;
+    border: 1px solid var(--accent-gold);
+    border-radius: 6px;
+    padding: 8px 12px !important;
+    margin: 5px 0 10px 0;
+    transition: all 0.3s ease;
+}
+
+.maps-link-highlighted:hover {
+    background-color: var(--accent-gold);
+    color: #ffffff !important;
+}
+
+/* Lightbox Modal CSS Fix */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    cursor: zoom-out;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    max-width: 90%;
+    max-height: 85vh;
+    border-radius: 8px;
+    object-fit: contain;
+}
